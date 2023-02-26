@@ -373,6 +373,7 @@ Section -AdditionalIcons
   CreateShortCut "$SMPROGRAMS\倉頡三五\Uninstall.lnk" "$INSTDIR\uninst.exe"
   CreateShortCut "$SMPROGRAMS\倉頡三五\倉頡三五設定.lnk" "$INSTDIR\CJ2356Settings.exe"
   CreateShortCut "$SMPROGRAMS\倉頡三五\捐助倉頡之友.lnk" "C:\Program Files\Internet Explorer\iexplore.exe" "https://chinesecj.com/forum/forum.php?mod=viewthread&tid=2061"
+  CreateShortCut "$SMPROGRAMS\倉頡三五\訪問GitHub開源專案.lnk" "C:\Program Files\Internet Explorer\iexplore.exe" "https://github.com/Arthurmcarthur/CJ2356"
 SectionEnd
 
 Section -Post
@@ -445,6 +446,7 @@ Section Uninstall
   Delete "$SMPROGRAMS\倉頡三五\Uninstall.lnk"
   Delete "$SMPROGRAMS\倉頡三五\倉頡三五設定.lnk"
   Delete "$SMPROGRAMS\倉頡三五\捐助倉頡之友.lnk"
+  Delete "$SMPROGRAMS\倉頡三五\訪問GitHub開源專案.lnk"
   RMDir  "$SMPROGRAMS\倉頡三五"
   ${If} ${RunningX64}
   	SetRegView 64
