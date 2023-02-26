@@ -653,6 +653,18 @@ INT_PTR CALLBACK CConfig::DictionaryPropertyPageWndProc(HWND hDlg, UINT message,
 					//wcscpy(dayiFileName, L"Cangjie5.cin");
 					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie3.cin");
 					break;
+				case DAYI_SCOPE::CANGJIE5_SPECIAL:
+					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie5_special.cin");
+					break;
+				case DAYI_SCOPE::CANGJIE3_EXT_A:
+					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie3_extA.cin");
+					break;
+				case DAYI_SCOPE::CANGJIE6:
+					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie6.cin");
+					break;
+				case DAYI_SCOPE::CANGJIE2:
+					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie2.cin");
+					break;
 				default:
 					//wcscpy(dayiFileName, L"Dayi.cin");
 					StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie5.cin");
@@ -1002,6 +1014,10 @@ void CConfig::ParseConfig(HWND hDlg, BOOL initDiag)
 		{
 			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡五代");
 			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡三代");
+			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡五代（小字集）");
+			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡三代（小字集）");
+			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡六代（雪齋）");
+			SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)L"倉頡二代");
 		}
 		SendMessage(hwnd, CB_SETCURSEL, (WPARAM)_dayiScope, 0);
 	}

@@ -684,6 +684,18 @@ BOOL CCompositionProcessorEngine::SetupDictionaryFile(IME_MODE imeMode)
 			//wcscpy(dayiFileName, L"Cangjie5.cin");
 			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie3.cin");
 			break;
+		case DAYI_SCOPE::CANGJIE5_SPECIAL:
+			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie5_special.cin");
+			break;
+		case DAYI_SCOPE::CANGJIE3_EXT_A:
+			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie3_extA.cin");
+			break;
+		case DAYI_SCOPE::CANGJIE6:
+			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie6.cin");
+			break;
+		case DAYI_SCOPE::CANGJIE2:
+			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie2.cin");
+			break;
 		default:
 			//wcscpy(dayiFileName, L"Dayi.cin");
 			StringCchPrintf(dayiFileName, MAX_PATH, L"%s", L"Cangjie5.cin");
