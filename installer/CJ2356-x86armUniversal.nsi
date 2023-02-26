@@ -360,6 +360,8 @@ Section "MainSection" SEC03
   File "*.cin"
   File "Phrase.txt"
   File "CJ2356Settings.exe"
+  File "cj5-ftzk.txt"
+  File "cj5-jtzk.txt"
   SetOutPath "$APPDATA\CJ2356\"
   CreateDirectory "$APPDATA\CJ2356"
   ;File "config.ini"
@@ -441,6 +443,8 @@ Section Uninstall
   Delete "$INSTDIR\*.exe"
   Delete "$INSTDIR\*.cin"
   Delete "$INSTDIR\Phrase.txt"
+  Delete "$INSTDIR\cj5-ftzk.txt"
+  Delete "$INSTDIR\cj5-jtzk.txt"
   RMDir /r "$INSTDIR"
   SetShellVarContext all
   Delete "$SMPROGRAMS\倉頡三五\Uninstall.lnk"
